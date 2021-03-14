@@ -1,5 +1,8 @@
 //Spatial/Location Test
 
+// This test checks for the correctness of location id, beta values, population size,
+// and location coordinates
+
 #include "Spatial/Location.h"
 #include "gtest/gtest.h"
 

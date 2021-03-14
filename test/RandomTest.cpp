@@ -1,6 +1,3 @@
-//
-// Created by pua66 on 3/8/2021.
-//
 
 #include "Helpers/NumberHelpers.h"
 #include "Core/Random.h"

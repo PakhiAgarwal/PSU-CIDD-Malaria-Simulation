@@ -1,6 +1,4 @@
-//
-// Created by pua66 on 3/10/2021.
-//
+
 
 #include "Core/Config/Config.h"
 #include "Spatial/WesolowskiSM.h"
@@ -27,7 +25,7 @@ TEST(ConfigTest, ReadFromDefaultInputFile){
 
     ASSERT_EQ(c.number_of_tracking_days(), 11);
     ASSERT_EQ(c.p_infection_from_an_infectious_bite(), 0.1);
-
+// 29-31: Test Later
     //ASSERT_EQ(c.age_structure(), std::vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 20, 60, 100});
     //ASSERT_EQ(c.initial_age_structure(),
     //        std::vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 25, 35, 45, 55, 65, 100});
@@ -64,6 +62,7 @@ TEST(ConfigTest, ReadFromDefaultInputFile){
     ASSERT_EQ(c.location_db().size(), 9);
     ASSERT_EQ(c.location_db()[0].id, 0);
     ASSERT_EQ(c.location_db()[8].id, 8);
+    //66-75: Test later
     //ASSERT_EQ(c.location_db()[0].age_distribution,
     //        std::vector<double>{0.0334, 0.0300, 0.0329, 0.0324, 0.0332, 0.0314, 0.0316, 0.0310,
     //                            0.0285, 0.0256, 0.0298, 0.0212, 0.0321, 0.0228, 0.0230, 0.1906, 0.1403, 0.0966,
@@ -88,7 +87,7 @@ TEST(ConfigTest, ReadFromDefaultInputFile){
     ASSERT_EQ(c.location_db()[8].population_size, 10090);
 
     ASSERT_EQ(c.birth_rate(), 0.03725);
-
+    // 91-99: Test Later
    // ASSERT_EQ(c.death_rate_by_age_class(),
     //        DoubleVector{0.053979329, 0.018935757, 0.006867257, 0.001124347, 0.001136455, 0.001606066,
     //                     0.001953783, 0.001530096, 0.001299153, 0.001068073, 0.000978264, 0.000978264, 0.0055,
@@ -130,6 +129,7 @@ TEST(ConfigTest, ReadFromDefaultInputFile){
 
     ASSERT_NE(c.genotype_db(), nullptr);
     ASSERT_EQ(c.genotype_db()->size(), 128);
+    //133-134: test later
     //ASSERT_EQ(c.genotype_db()->at(0)->gene_expression(), IntVector{0, 0, 0, 0, 0});
     //ASSERT_EQ(c.genotype_db()->at(127)->gene_expression(), IntVector{1, 7, 1, 1, 1});
 
@@ -154,6 +154,7 @@ TEST(ConfigTest, ReadFromDefaultInputFile){
     ASSERT_EQ(((SCTherapy*) c.therapy_db()[0])->dosing_day[0], 3);
 
     ASSERT_EQ(c.therapy_db()[11]->drug_ids.size(), 3);
+    // 158: Test Later
     //ASSERT_EQ(c.therapy_db()[11]->drug_ids, IntVector{0, 1, 2});
     ASSERT_EQ(((SCTherapy*) c.therapy_db()[11])->dosing_day[0], 3);
 

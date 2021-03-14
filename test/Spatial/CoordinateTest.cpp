@@ -1,4 +1,5 @@
 //Spatial/Coordinate Test
+// This script tests the values for longitudes and latitudes
 
 #include "gtest/gtest.h"
 #include "Spatial/Coordinate.h"
@@ -6,6 +7,7 @@
 
 using namespace Spatial;
 
+// This test checks for the correctness of values of certain coordinates
 TEST(CoordinateTest, InitializeWithLatAndLong){
     Coordinate c(10, 100);
     ASSERT_EQ(10, c.latitude);
@@ -15,6 +17,7 @@ TEST(CoordinateTest, InitializeWithLatAndLong){
     ASSERT_EQ(0,c1.longitude);
 }
 
+//On the basis of coordinate values this test checks for the distance between two coordinates
 TEST(CoordinateTest, CalculateDistanceInKm){
     Coordinate c1;
     Coordinate c2(80, 70);
